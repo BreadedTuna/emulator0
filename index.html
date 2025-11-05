@@ -20,7 +20,7 @@
 <body>
     <div id="v86screen"></div>
     <script>
-        const emulator = new V86Starter({
+        const emulator = new V86({
             wasm_path: "https://copy.sh/v86/build/v86.wasm",
             memory_size: 128 * 1024 * 1024, // 128 MB RAM
             vga_memory_size: 8 * 1024 * 1024,
@@ -33,7 +33,7 @@
         });
 
         emulator.add_listener("serial0-output-char", function(c) {
-            // Optional: print kernel output to console
+            // optional: print kernel output to console
             // console.log(c);
         });
 
